@@ -546,7 +546,7 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
     ///   - needUpdateNewMessage: If set to `true`, increases new message count.
     ///   - needReload: If set to `true`, the tableview will be call reloadData.
     /// - Since: 1.2.5
-    public func upsertMessagesInList(messages: [SBDBaseMessage]?,
+    open func upsertMessagesInList(messages: [SBDBaseMessage]?,
                                       needUpdateNewMessage: Bool = false,
                                       needReload: Bool) {
         SBULog.info("First : \(String(describing: messages?.first)), Last : \(String(describing: messages?.last))")
