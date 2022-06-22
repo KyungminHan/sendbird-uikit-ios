@@ -12,6 +12,7 @@ import MobileCoreServices
 import AVFoundation
 import PhotosUI
 
+@objcMembers
 open class SBUBaseChannelViewController: SBUBaseViewController {
     
     @SBUThemeWrapper(theme: SBUTheme.channelTheme)

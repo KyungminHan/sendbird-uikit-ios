@@ -13,6 +13,7 @@ import MobileCoreServices
 import AVKit
 import SafariServices
 
+@objcMembers
 open class SBUChannelViewController: SBUBaseChannelViewController {
 
     // MARK: - UI properties (Public)
