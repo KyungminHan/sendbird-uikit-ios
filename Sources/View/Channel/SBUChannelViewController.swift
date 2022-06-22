@@ -447,6 +447,8 @@ open class SBUChannelViewController: SBUBaseChannelViewController {
         }
 
         self.addGestureHideKeyboard()
+
+        print("Test Code!")
     }
     
     open override func viewWillAppear(_ animated: Bool) {
