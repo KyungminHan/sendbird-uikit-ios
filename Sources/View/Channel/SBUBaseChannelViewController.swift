@@ -549,6 +549,9 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
     open func upsertMessagesInList(messages: [SBDBaseMessage]?,
                                       needUpdateNewMessage: Bool = false,
                                       needReload: Bool) {
+
+        SBULog.info("Test LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest Log")
+
         SBULog.info("First : \(String(describing: messages?.first)), Last : \(String(describing: messages?.last))")
         var needMarkAsRead = false
         
