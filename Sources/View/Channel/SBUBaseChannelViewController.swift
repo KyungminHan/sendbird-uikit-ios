@@ -546,11 +546,9 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
     ///   - needUpdateNewMessage: If set to `true`, increases new message count.
     ///   - needReload: If set to `true`, the tableview will be call reloadData.
     /// - Since: 1.2.5
-    open func upsertMessagesInList(messages: [SBDBaseMessage]?,
+    public func upsertMessagesInList(messages: [SBDBaseMessage]?,
                                       needUpdateNewMessage: Bool = false,
                                       needReload: Bool) {
-
-        SBULog.info("Test LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest LogTest Log")
 
         SBULog.info("First : \(String(describing: messages?.first)), Last : \(String(describing: messages?.last))")
         var needMarkAsRead = false
@@ -564,7 +562,7 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
             
             guard message is SBDUserMessage || message is SBDFileMessage else {
                 if message is SBDAdminMessage {
-                    self.messageList.append(message)
+                    //self.messageList.append(message)
                 }
                 return
             }
