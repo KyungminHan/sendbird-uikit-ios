@@ -1079,7 +1079,7 @@ public typealias SBUNewMessageInfoHandler = () -> Swift.Void
   @objc @_Concurrency.MainActor(unsafe) public func addGestureHideKeyboard()
   @objc @_Concurrency.MainActor(unsafe) public func loadChannel(channelUrl: Swift.String?, messageListParams: SendBirdSDK.SBDMessageListParams? = nil)
   @objc @_Concurrency.MainActor(unsafe) public func clearMessageList()
-  @objc @_Concurrency.MainActor(unsafe) public func upsertMessagesInList(messages: [SendBirdSDK.SBDBaseMessage]?, needUpdateNewMessage: Swift.Bool = false, needReload: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) open func upsertMessagesInList(messages: [SendBirdSDK.SBDBaseMessage]?, needUpdateNewMessage: Swift.Bool = false, needReload: Swift.Bool)
   @objc @_Concurrency.MainActor(unsafe) public func deleteMessagesInList(messageIds: [Swift.Int64]?, needReload: Swift.Bool)
   @objc @_Concurrency.MainActor(unsafe) public func deleteMessagesInList(messageIds: [Swift.Int64]?, excludeResendableMessages: Swift.Bool, needReload: Swift.Bool)
   @objc @_Concurrency.MainActor(unsafe) public func deleteResendableMessage(_ message: SendBirdSDK.SBDBaseMessage, needReload: Swift.Bool)
