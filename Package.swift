@@ -17,7 +17,8 @@ let package = Package(
     targets: [
         .target(
             name: "SendBirdUIKit",
-            dependencies: ["SendBirdSDK"]
+            dependencies: ["SendBirdSDK"],
+            resources: [.process("Resource")]
         ),
     ]
 )
