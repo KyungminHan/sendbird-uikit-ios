@@ -75,7 +75,7 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
     
     // MARK: - Constraints
     // for constraint
-    var messageInputViewBottomConstraint: NSLayoutConstraint!
+    public var messageInputViewBottomConstraint: NSLayoutConstraint!
     var tableViewTopConstraint: NSLayoutConstraint!
     
     // MARK: - Lifecycle
