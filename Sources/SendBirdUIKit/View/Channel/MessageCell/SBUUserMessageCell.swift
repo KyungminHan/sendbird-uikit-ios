@@ -191,7 +191,8 @@ open class SBUUserMessageCell: SBUContentBaseMessageCell {
             model: SBUUserMessageTextViewModel(
                 message: message,
                 position: position,
-                highlight: true
+                highlight: true,
+                highlightKeyword: highlightInfo?.keyword
             )
         )
     }
