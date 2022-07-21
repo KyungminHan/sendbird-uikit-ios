@@ -14,9 +14,11 @@ public class SBUHighlightMessageInfo: NSObject {
     
     public let messageId: Int64
     public let updatedAt: Int64
+    public let keyword: String?
     
-    public init(messageId: Int64, updatedAt: Int64) {
+    public init(messageId: Int64, updatedAt: Int64, keyword: String? = nil) {
         self.messageId = messageId
         self.updatedAt = updatedAt
+        self.keyword = keyword
     }
 }

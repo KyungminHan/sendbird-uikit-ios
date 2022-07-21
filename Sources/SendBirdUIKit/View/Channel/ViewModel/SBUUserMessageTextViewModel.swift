@@ -21,7 +21,8 @@ struct SBUUserMessageTextViewModel {
          textColor: UIColor? = nil,
          isEdited: Bool? = nil,
          isOverlay: Bool = false,
-         highlight: Bool = false) {
+         highlight: Bool = false,
+         highlightKeyword: String? = nil) {
         
         let text = message?.message ?? text ?? ""
         
@@ -68,7 +69,8 @@ struct SBUUserMessageTextViewModel {
         
         /// Highlighting text
         if highlight {
-            let range = NSRange(location: 0, length: text.utf16.count)
+            let highlightMessage = highlightKeyword ?? text
+            let range = NSRange(location: 0, length: highlightMessage.utf16.count)
             attributedString.addAttributes([.backgroundColor: SBUColorSet.highlight,
                                             .foregroundColor: highlightTextColor],
                                            range: range)
