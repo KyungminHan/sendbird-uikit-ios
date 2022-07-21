@@ -70,10 +70,14 @@ struct SBUUserMessageTextViewModel {
         /// Highlighting text
         if highlight {
             let highlightMessage = highlightKeyword ?? text
-            let range = NSRange(location: 0, length: highlightMessage.utf16.count)
-            attributedString.addAttributes([.backgroundColor: SBUColorSet.highlight,
-                                            .foregroundColor: highlightTextColor],
-                                           range: range)
+            let ranges = text.ranges(of: highlightMessage)
+            let indexes = text.containIndexes(in: ranges)
+            indexes.forEach {
+                let range = NSRange(location: $0.start, length: highlightMessage.utf16.count)
+                attributedString.addAttributes([.backgroundColor: SBUColorSet.highlight,
+                                                .foregroundColor: highlightTextColor],
+                                               range: range)
+            }
         }
         
         if let editTextColor = editTextColor, edited {
@@ -90,5 +94,23 @@ struct SBUUserMessageTextViewModel {
         self.text = text
         self.textColor = normalTextColor
         self.attributedText = attributedString
+    }
+}
+
+extension StringProtocol {
+    func containIndexes(in ranges: [Range<String.Index>]) -> [(start: Int, end: Int)] {
+        return ranges.map {
+            let startIndex = $0.lowerBound.utf16Offset(in: self)
+            let endIndex = $0.upperBound.utf16Offset(in: self)
+            return (start: startIndex, end: endIndex)
+        }
+    }
+
+    func ranges(of targetString: Self, options: String.CompareOptions = [], locale: Locale? = nil) -> [Range<String.Index>] {
+        let result: [Range<String.Index>] = self.indices.compactMap { startIndex in
+            let targetStringEndIndex = index(startIndex, offsetBy: targetString.count, limitedBy: endIndex) ?? endIndex
+            return range(of: targetString, options: options, range: startIndex..<targetStringEndIndex, locale: locale)
+        }
+        return result
     }
 }
