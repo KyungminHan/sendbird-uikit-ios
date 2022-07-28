@@ -1030,7 +1030,7 @@ open class SBUChannelViewController: SBUBaseChannelViewController {
     
     /// This is used to messageInputView state update.
     /// - Since: 1.2.0
-    public func updateMessageInputModeState() {
+    open func updateMessageInputModeState() {
         if let _ = self.channel {
             self.updateBroadcastModeState()
             self.updateFrozenModeState()
