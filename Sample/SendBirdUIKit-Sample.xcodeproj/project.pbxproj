@@ -65,6 +65,7 @@
 		A9C29B382564FF63007248F5 /* CommunityChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C29B372564FF63007248F5 /* CommunityChannelCell.swift */; };
 		A9F1B1B62579F28B008DEB11 /* CreateCommunityChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F1B1B52579F28B008DEB11 /* CreateCommunityChannelViewController.swift */; };
 		C6D3DCE826141350003E6DCB /* SendBirdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D3DCE726141350003E6DCB /* SendBirdSDK.framework */; };
+		FEA42F3D28E1837500DC8CC4 /* DeskAdminMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA42F3C28E1837500DC8CC4 /* DeskAdminMessage.swift */; };
 		FEA91B8F2864CA9E00BDE132 /* UIStackView.SBUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA91AC42864CA9E00BDE132 /* UIStackView.SBUIKit.swift */; };
 		FEA91B902864CA9E00BDE132 /* URL+SBUKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA91AC52864CA9E00BDE132 /* URL+SBUKit.swift */; };
 		FEA91B912864CA9E00BDE132 /* Array+SBUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA91AC62864CA9E00BDE132 /* Array+SBUIKit.swift */; };
@@ -321,6 +322,7 @@
 		A9F1B1B52579F28B008DEB11 /* CreateCommunityChannelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityChannelViewController.swift; sourceTree = "<group>"; };
 		C6D3DCE726141350003E6DCB /* SendBirdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SendBirdSDK.framework; path = Pods/SendBirdSDK/SendBirdSDK.framework; sourceTree = "<group>"; };
 		D9AA853E66DC6613E1CCFB10 /* Pods-SendBirdUIKit-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SendBirdUIKit-Sample.release.xcconfig"; path = "Target Support Files/Pods-SendBirdUIKit-Sample/Pods-SendBirdUIKit-Sample.release.xcconfig"; sourceTree = "<group>"; };
+		FEA42F3C28E1837500DC8CC4 /* DeskAdminMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskAdminMessage.swift; sourceTree = "<group>"; };
 		FEA91AC42864CA9E00BDE132 /* UIStackView.SBUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStackView.SBUIKit.swift; sourceTree = "<group>"; };
 		FEA91AC52864CA9E00BDE132 /* URL+SBUKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+SBUKit.swift"; sourceTree = "<group>"; };
 		FEA91AC62864CA9E00BDE132 /* Array+SBUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SBUIKit.swift"; sourceTree = "<group>"; };
@@ -939,6 +941,7 @@
 				FEA91AF52864CA9E00BDE132 /* SBUMessageCache.swift */,
 				FEA91AF62864CA9E00BDE132 /* SBUUser.swift */,
 				FEA91AF72864CA9E00BDE132 /* SBUHighlightMessageInfo.swift */,
+				FEA42F3C28E1837500DC8CC4 /* DeskAdminMessage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1552,6 +1555,7 @@
 				FEA91C082864CA9F00BDE132 /* SBUPhotoAccess.swift in Sources */,
 				FEA91BF12864CA9E00BDE132 /* SBUMessageInputMode.swift in Sources */,
 				FEA91BA62864CA9E00BDE132 /* SBUIconSetType.swift in Sources */,
+				FEA42F3D28E1837500DC8CC4 /* DeskAdminMessage.swift in Sources */,
 				FEA91BA72864CA9E00BDE132 /* SBUEnums.swift in Sources */,
 				FEA91BCB2864CA9E00BDE132 /* SBUUserProfileView.swift in Sources */,
 				FEA91BBE2864CA9E00BDE132 /* SBUMessageSearchViewModel.swift in Sources */,

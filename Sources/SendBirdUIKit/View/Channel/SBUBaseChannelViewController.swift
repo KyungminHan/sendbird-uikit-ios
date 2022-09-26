@@ -561,8 +561,10 @@ open class SBUBaseChannelViewController: SBUBaseViewController {
             guard self.messageListParams.belongs(to: message) else { return }
             
             guard message is SBDUserMessage || message is SBDFileMessage else {
-                if message is SBDAdminMessage {
-                    //self.messageList.append(message)
+                if let adminMessage = (message as? SBDAdminMessage) {
+                    if DeskAdminMessage.matched(adminMessage) == false {
+                        self.messageList.append(message)
+                    }
                 }
                 return
             }
