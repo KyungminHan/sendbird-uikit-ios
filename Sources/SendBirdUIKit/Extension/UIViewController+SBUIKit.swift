@@ -6,7 +6,6 @@
 //  Copyright © 2020 Sendbird, Inc. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UIViewController {

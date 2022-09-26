@@ -24,7 +24,7 @@ final class DeskAdminMessage {
 
     static func matched(_ message: SBDAdminMessage) -> Bool {
         return filterList
-            .filter { message?.customType == $0 }
+            .filter { message.customType == $0 }
             .isEmpty == false
     }
 }
