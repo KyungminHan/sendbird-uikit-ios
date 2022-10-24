@@ -124,14 +124,14 @@ public struct SBUUserMessageTextViewModel {
         let highlightAll = highlightKeyword == ""
         /// Highlighting text
         if highlightAll, text.utf16.count <= attributedString.length {
-            let range = NSRange(location: 0, length: text.utf16.count)
-            attributedString.addAttributes(
-                [
-                    .backgroundColor: SBUColorSet.highlight,
-                    .foregroundColor: highlightTextColor
-                ],
-                range: range
-            )
+            let ranges = text.ranges(of: highlightKeyword)
+            let indexe = text.containIndexes(in: ranges)
+            indexe.forEach {
+                let range = NSRange(location: $0.start, length: highlightKeyword.utf16.count)
+                attributedString.addAttributes([.backgroundColor: SBUColorSet.highlight,
+                                                .foregroundColor: highlightTextColor],
+                                               range: range)
+            }
         } else {
             var baseRange = NSRange(location: 0, length: attributedString.length)
             var ranges: [NSRange] = []

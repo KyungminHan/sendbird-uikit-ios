@@ -340,6 +340,7 @@
 		A968B36A28C86B5700271C60 /* LiveStreamChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968B36928C86B5700271C60 /* LiveStreamChannelListViewModel.swift */; };
 		A968B36C28C86B8600271C60 /* LiveStreamChannelListModule.List.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968B36B28C86B8600271C60 /* LiveStreamChannelListModule.List.swift */; };
 		A968B36E28C9AB7F00271C60 /* LiveStreamChannelModule.Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = A968B36D28C9AB7F00271C60 /* LiveStreamChannelModule.Media.swift */; };
+		FEB34E8F290662E000D6D5AC /* DeskAdminMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB34E8E290662E000D6D5AC /* DeskAdminMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -705,6 +706,7 @@
 		A968B36928C86B5700271C60 /* LiveStreamChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamChannelListViewModel.swift; sourceTree = "<group>"; };
 		A968B36B28C86B8600271C60 /* LiveStreamChannelListModule.List.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamChannelListModule.List.swift; sourceTree = "<group>"; };
 		A968B36D28C9AB7F00271C60 /* LiveStreamChannelModule.Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveStreamChannelModule.Media.swift; sourceTree = "<group>"; };
+		FEB34E8E290662E000D6D5AC /* DeskAdminMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskAdminMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1487,10 +1489,11 @@
 		A960A41E28F804E000E3E37A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEB34E8E290662E000D6D5AC /* DeskAdminMessage.swift */,
+				A960A42228F804E000E3E37A /* SBUHighlightMessageInfo.swift */,
 				A960A41F28F804E000E3E37A /* SBUMention.swift */,
 				A960A42028F804E000E3E37A /* SBUMessageCache.swift */,
 				A960A42128F804E000E3E37A /* SBUUser.swift */,
-				A960A42228F804E000E3E37A /* SBUHighlightMessageInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2202,6 +2205,7 @@
 				A960A53728F804E100E3E37A /* SBUMessageSearchModule.swift in Sources */,
 				A960A58828F804E100E3E37A /* SBUOpenChannelAdminMessageCell.swift in Sources */,
 				A960A58128F804E100E3E37A /* SBUQuotedBaseMessageView.swift in Sources */,
+				FEB34E8F290662E000D6D5AC /* DeskAdminMessage.swift in Sources */,
 				9C037E31280432DB00059696 /* UIcolor+Ext.swift in Sources */,
 				A960A55E28F804E100E3E37A /* SBUTheme+Type.swift in Sources */,
 				A960A5BF28F804E100E3E37A /* SBUMenuSheetViewController.swift in Sources */,

@@ -643,8 +643,10 @@ open class SBUBaseChannelViewModel: NSObject {
             }
             
             guard message is UserMessage || message is FileMessage else {
-                if message is AdminMessage {
-                    self.messageList.append(message)
+                if let adminMessage = (message as? AdminMessage) {
+                    if DeskAdminMessage.matched(adminMessage) == false {
+                        self.messageList.append(message)
+                    }
                 }
                 return
             }
