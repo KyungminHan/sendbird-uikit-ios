@@ -24,7 +24,7 @@ let package = Package(
             dependencies: [
                 .product(name: "SendbirdChatSDK", package: "SendbirdChatSDK")
             ],
-            path: "Framework/Dependency",
+            path: "Sources",
             exclude: ["../../Sample", "../../Sources"]
         ),
     ]
