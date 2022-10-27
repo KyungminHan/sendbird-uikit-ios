@@ -399,7 +399,9 @@ extension SBUGroupChannelModule {
                         withTextView: true
                     )
                     userMessageCell.configure(with: configuration)
-                    userMessageCell.configure(highlightInfo: self.highlightInfo)
+                    userMessageCell.configure(highlightInfo: .init(keyword: highlightInfo?.keyword ?? "",
+                                                                   messageId: message.messageId,
+                                                                   updatedAt: message.updatedAt))
                     (userMessageCell.quotedMessageView as? SBUQuotedBaseMessageView)?.delegate = self
                     self.setMessageCellAnimation(userMessageCell, message: userMessage, indexPath: indexPath)
                     self.setMessageCellGestures(userMessageCell, message: userMessage, indexPath: indexPath)
@@ -415,7 +417,9 @@ extension SBUGroupChannelModule {
                         useReaction: useReaction
                     )
                     fileMessageCell.configure(with: configuration)
-                    fileMessageCell.configure(highlightInfo: self.highlightInfo)
+                    fileMessageCell.configure(highlightInfo: .init(keyword: highlightInfo?.keyword ?? "",
+                                                                   messageId: message.messageId,
+                                                                   updatedAt: message.updatedAt))
                     (fileMessageCell.quotedMessageView as? SBUQuotedBaseMessageView)?.delegate = self
                     self.setMessageCellAnimation(fileMessageCell, message: fileMessage, indexPath: indexPath)
                     self.setMessageCellGestures(fileMessageCell, message: fileMessage, indexPath: indexPath)
