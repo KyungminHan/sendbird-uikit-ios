@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "SendbirdUIKit",
-            targets: ["SendbirdUIKitTarget"]
+            targets: ["SendbirdUIKit"]
         ),
     ],
     dependencies: [
@@ -20,7 +20,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "SendbirdUIKitTarget",
+            name: "SendbirdUIKit",
             dependencies: [
                 .product(name: "SendbirdChatSDK", package: "SendbirdChatSDK")
             ],

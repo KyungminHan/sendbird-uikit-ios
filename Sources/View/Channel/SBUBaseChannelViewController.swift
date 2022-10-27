@@ -43,7 +43,7 @@ open class SBUBaseChannelViewController: SBUBaseViewController, SBUBaseChannelVi
     var initialMessageInputBottomConstraint: CGFloat = 0
     var initialMessageInputOrigin: CGPoint = .zero
     
-    var messageInputViewBottomConstraint: NSLayoutConstraint!
+    public var messageInputViewBottomConstraint: NSLayoutConstraint!
     var tableViewTopConstraint: NSLayoutConstraint!
     var lastSeenIndexPath: IndexPath?
     

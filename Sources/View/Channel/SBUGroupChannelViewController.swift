@@ -41,8 +41,8 @@ open class SBUGroupChannelViewController: SBUBaseChannelViewController, SBUGroup
     public override var channel: GroupChannel? { self.viewModel?.channel as? GroupChannel }
     
     public private(set) var newMessagesCount: Int = 0
-    
-    
+
+
     // MARK: - Logic properties (Private)
     
     
