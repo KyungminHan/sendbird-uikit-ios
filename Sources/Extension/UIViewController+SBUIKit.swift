@@ -12,7 +12,7 @@ import UIKit
 extension UIViewController {
     // Not using now
     func sbu_loadViewFromNib() {
-        guard let view = Bundle(identifier: SBUConstant.bundleIdentifier)?.loadNibNamed(
+        guard let view = Bundle.module.loadNibNamed(
             String(describing: type(of: self)),
             owner: self,
             options: nil

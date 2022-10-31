@@ -328,8 +328,7 @@ public class SendbirdUI {
     /// - Since: 2.2.0
     public static var shortVersion: String {
         
-        if let bundle = Bundle(identifier: SBUConstant.bundleIdentifier),
-            let build = bundle.infoDictionary?[SBUConstant.sbuAppVersion] {
+        if let build = Bundle.module.infoDictionary?[SBUConstant.sbuAppVersion] {
             return "\(build)"
         } else {
             let bundle = Bundle(for: SendbirdUI.self)
