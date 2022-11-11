@@ -1,5 +1,14 @@
 # Changelog
 
+### v3.2.3 (Nov 11, 2022)
+* Opened keyboard events: `keyboardWillShow(_:)` and  `keyboardWillHide(_:)`
+* Updated `navigationBar` shadowColor
+* Modified the type of class that includes the `UIControl` type object to `NSObject`
+* Improved logic to update the 'startPoint' in the channel
+* Improved logic moving to the original message of a quoted message
+* Improved channel initialization process.
+* Improved stability
+
 ### v3.2.2 (Oct 28, 2022) with Chat SDK **v4.1.2**
 * Fixed `scrollToBottom` button flickers when send a message
 * Improved fileMessage related processing
