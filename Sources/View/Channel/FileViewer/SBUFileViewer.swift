@@ -118,19 +118,11 @@ open class SBUFileViewer: SBUBaseViewController, UIScrollViewDelegate {
         if let bottomView = self.bottomView as? BottomView {
 
             let isCurrnetUser = self.fileMessage?.sender?.userId == SBUGlobals.currentUser?.userId
-            bottomView.deleteButton.isHidden = !isCurrnetUser
+            bottomView.deleteButton.isHidden = true
 
             bottomView.downloadButton.addTarget(self,
                                                 action: #selector(onClickDownload(sender:)),
                                                 for: .touchUpInside)
-            if let fileMessage = fileMessage, fileMessage.threadInfo.replyCount > 0 {
-                bottomView.deleteButton.isHidden = true
-            } else {
-                bottomView.deleteButton.addTarget(self,
-                                                  action: #selector(onClickDelete(sender:)),
-                                                  for: .touchUpInside)
-            }
-                
         }
         
         guard let urlString = urlString else { return }
