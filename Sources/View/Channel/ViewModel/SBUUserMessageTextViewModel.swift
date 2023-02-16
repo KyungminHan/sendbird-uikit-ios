@@ -186,7 +186,7 @@ public struct SBUUserMessageTextViewModel {
     public func addEditedStateIfNeeded(with attributedString: NSMutableAttributedString) {
         if let editTextColor = editTextColor, edited {
             let editedAttributedString = NSMutableAttributedString(
-                string: " " + SBUStringSet.Message_Edited,
+                string: SBUStringSet.Message_Edited,
                 attributes: [
                     .font: font,
                     .paragraphStyle: paragraphStyle,
