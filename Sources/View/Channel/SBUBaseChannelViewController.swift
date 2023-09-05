@@ -559,7 +559,7 @@ open class SBUBaseChannelViewController: SBUBaseViewController, SBUBaseChannelVi
         initialLoad: Bool
     ) {
         guard let baseListComponent = baseListComponent else { return }
-        let emptyViewType: EmptyViewType = (!initialLoad && viewModel.fullMessageList.isEmpty) ? .noMessages : .none
+        let emptyViewType: EmptyViewType = viewModel.fullMessageList.isEmpty ? .noMessages : .none
         baseListComponent.updateEmptyView(type: emptyViewType)
         
         defer {
